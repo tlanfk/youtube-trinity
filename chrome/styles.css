@@ -1,0 +1,186 @@
+/* 탭 컨테이너 스타일 */
+#my-extension-tabs {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    /* 드래그로 들어 올린 탭이 위쪽에서 잘리지 않도록 여백을 주고, 음수 margin으로 원래 위치는 유지 */
+    padding: 4px 0 12px 0;
+    background: transparent;
+    margin: -4px 0 10px 0;
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+html[dark] #my-extension-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ext-tab-btn {
+    position: relative;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+    /* 드래그 중 다른 탭이 비켜설 때(translate), 탭을 들어 올릴 때(scale, box-shadow)의 애니메이션 */
+    transition: background-color 0.2s, color 0.2s, translate 0.24s cubic-bezier(0.2, 0, 0, 1), scale 0.18s ease, box-shadow 0.24s ease;
+    font-family: "Roboto", "Arial", sans-serif;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+/* 탭 드래그 중: 화면 어디서든 grabbing 커서 유지, 텍스트 선택 방지 */
+html.ext-tab-dragging,
+html.ext-tab-dragging * {
+    cursor: grabbing !important;
+    user-select: none !important;
+}
+
+/* 드래그로 들어 올린 탭 */
+.ext-tab-btn.ext-tab-lifted {
+    z-index: 3;
+    scale: 1.04;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 6px 14px rgba(0, 0, 0, 0.24);
+    /* translate는 전환에서 제외: 마우스를 지연 없이 따라가야 함 */
+    transition: background-color 0.2s, color 0.2s, scale 0.18s ease, box-shadow 0.2s ease;
+}
+
+html[dark] .ext-tab-btn.ext-tab-lifted {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16), 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* 놓은 뒤 제자리로 안착하는 동안에도 다른 탭 위에 보이게 */
+.ext-tab-btn.ext-tab-settling {
+    z-index: 2;
+}
+
+/* 놓을 자리를 보여주는 점선 슬롯 */
+.ext-tab-slot {
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    border: 2px dashed rgba(6, 95, 212, 0.45);
+    border-radius: 8px;
+    background: rgba(6, 95, 212, 0.08);
+    pointer-events: none;
+    transition: translate 0.24s cubic-bezier(0.2, 0, 0, 1);
+    animation: ext-tab-slot-in 0.16s ease-out;
+}
+
+html[dark] .ext-tab-slot {
+    border-color: rgba(138, 180, 248, 0.5);
+    background: rgba(138, 180, 248, 0.1);
+}
+
+@keyframes ext-tab-slot-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 드래그가 끝날 때 최종 위치를 전환 효과 없이 확정 */
+#my-extension-tabs.ext-tab-no-anim .ext-tab-btn {
+    transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ext-tab-btn,
+    .ext-tab-slot {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+.ext-tab-btn.active {
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.ext-tab-btn.inactive {
+    background-color: #f2f2f2;
+    color: #0f0f0f;
+}
+
+.ext-tab-btn.inactive:hover {
+    background-color: #e5e5e5;
+}
+
+html[dark] .ext-tab-btn.active {
+    background-color: #f1f1f1;
+    color: #0f0f0f;
+}
+
+html[dark] .ext-tab-btn.inactive {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f1f1f1;
+}
+
+html[dark] .ext-tab-btn.inactive:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 추천 영상 목록은 사이드바(#secondary-inner) 안에 있을 때만 댓글 탭처럼 전용 스크롤바를 가짐 */
+.ext-scrollable-content,
+#secondary-inner > #related.ext-related-scroll {
+    height: calc(100vh - 140px) !important;
+    overflow-y: auto !important;
+    padding-right: 5px;
+    display: block !important;
+    position: relative !important;
+    min-height: 0 !important;
+}
+
+/* 추천 영상 목록에서는 광고 등 일부 요소가 살짝 삐져나와도 가로 스크롤바가 생기지 않게 함 */
+#secondary-inner > #related.ext-related-scroll {
+    overflow-x: hidden !important;
+}
+
+/* 스크립트 패널의 닫기(X) 버튼 숨김 */
+ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-searchable-transcript"] #visibility-button {
+    display: none !important;
+}
+
+/* 챕터 / 질문하기 패널의 닫기(X) 버튼 숨김 */
+ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-macro-markers-description-chapters"] #visibility-button,
+ytd-engagement-panel-section-list-renderer[target-id*="youchat" i] #visibility-button {
+    display: none !important;
+}
+
+.ext-placeholder {
+    padding: 20px;
+    text-align: center;
+    color: #606060;
+    font-size: 14px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+html[dark] .ext-placeholder {
+    background: #2a2a2a;
+    color: #aaa;
+}
+
+/* ========================================== */
+/* [수정됨] 방해 요소 숨김 처리 */
+/* ========================================== */
+
+/* 1. 챕터 제목 텍스트만 정확하게 숨김 (재생바 복구) */
+.ytp-chapter-title-content {
+    display: none !important;
+}
+
+/* 2. 설명란의 스크립트 버튼 삭제 */
+ytd-video-description-transcript-section-renderer {
+    display: none !important;
+}
+
+/* 3. 챕터 보기 버튼 삭제 */
+button[aria-label="챕터 보기"],
+button[aria-label="Показать главы"],
+button[aria-label="Kapitel anzeigen"],
+.ytp-chapter-title.ytp-button {
+    display: none !important;
+}

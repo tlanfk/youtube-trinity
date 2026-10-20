@@ -1,0 +1,41 @@
+{
+  "extName": {
+    "message": "YouTube Trinity"
+  },
+  "extDescription": {
+    "message": "YouTubeのサイドバーで、コメント、チャプター、文字起こしをひと目で確認できます。"
+  },
+  "popupActionTitle": {
+    "message": "YouTube Trinity の設定"
+  },
+  "popupTitle": {
+    "message": "表示するタブ"
+  },
+  "popupSubtitle": {
+    "message": "表示したい項目だけを残して、それ以外は非表示にできます。"
+  },
+  "popupReorderHint": {
+    "message": "タブ順は YouTube 画面上でドラッグして変更できます。"
+  },
+  "popupMinVisibleWarning": {
+    "message": "少なくとも 1 つのタブは表示する必要があります。"
+  },
+  "popupTabRecommendations": {
+    "message": "おすすめ動画"
+  },
+  "popupTabComments": {
+    "message": "コメント"
+  },
+  "popupTabChapters": {
+    "message": "チャプター"
+  },
+  "popupTabAsk": {
+    "message": "質問する"
+  },
+  "popupTabScript": {
+    "message": "文字起こし"
+  },
+  "popupSupportCoffee": {
+    "message": "コーヒー1杯で応援する"
+  }
+}

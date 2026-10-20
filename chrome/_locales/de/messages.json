@@ -1,0 +1,41 @@
+{
+  "extName": {
+    "message": "YouTube Trinity"
+  },
+  "extDescription": {
+    "message": "Kommentare, Kapitel und Transkripte direkt in der YouTube-Seitenleiste ansehen."
+  },
+  "popupActionTitle": {
+    "message": "YouTube Trinity-Einstellungen"
+  },
+  "popupTitle": {
+    "message": "Sichtbare Tabs"
+  },
+  "popupSubtitle": {
+    "message": "Behalten Sie nur die Bereiche, die Sie sehen möchten, und blenden Sie den Rest aus."
+  },
+  "popupReorderHint": {
+    "message": "Die Reihenfolge der Tabs kann auf der YouTube-Seite per Ziehen geändert werden."
+  },
+  "popupMinVisibleWarning": {
+    "message": "Mindestens ein Tab muss sichtbar bleiben."
+  },
+  "popupTabRecommendations": {
+    "message": "Videos"
+  },
+  "popupTabComments": {
+    "message": "Kommentare"
+  },
+  "popupTabChapters": {
+    "message": "Kapitel"
+  },
+  "popupTabAsk": {
+    "message": "Fragen"
+  },
+  "popupTabScript": {
+    "message": "Transkript"
+  },
+  "popupSupportCoffee": {
+    "message": "Mit einer Tasse Kaffee unterstützen"
+  }
+}

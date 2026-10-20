@@ -1,0 +1,41 @@
+{
+  "extName": {
+    "message": "YouTube Trinity"
+  },
+  "extDescription": {
+    "message": "Check comments, chapters, and transcripts at a glance in the YouTube sidebar."
+  },
+  "popupActionTitle": {
+    "message": "YouTube Trinity settings"
+  },
+  "popupTitle": {
+    "message": "Visible tabs"
+  },
+  "popupSubtitle": {
+    "message": "Keep only the sections you want to see and hide the rest."
+  },
+  "popupReorderHint": {
+    "message": "You can reorder tabs by dragging them on the YouTube page."
+  },
+  "popupMinVisibleWarning": {
+    "message": "At least one tab must remain visible."
+  },
+  "popupTabRecommendations": {
+    "message": "Videos"
+  },
+  "popupTabComments": {
+    "message": "Comments"
+  },
+  "popupTabChapters": {
+    "message": "Chapters"
+  },
+  "popupTabAsk": {
+    "message": "Ask"
+  },
+  "popupTabScript": {
+    "message": "Transcript"
+  },
+  "popupSupportCoffee": {
+    "message": "Support with a cup of coffee"
+  }
+}

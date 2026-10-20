@@ -1,0 +1,10 @@
+# 스토어에 올릴 때 만드는 압축 파일
+*.zip
+*.xpi
+*.crx
+
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env

@@ -1,0 +1,41 @@
+{
+  "extName": {
+    "message": "YouTube Trinity"
+  },
+  "extDescription": {
+    "message": "Просматривайте комментарии, главы и расшифровки в боковой панели YouTube."
+  },
+  "popupActionTitle": {
+    "message": "Настройки YouTube Trinity"
+  },
+  "popupTitle": {
+    "message": "Видимые вкладки"
+  },
+  "popupSubtitle": {
+    "message": "Оставьте только нужные разделы, а остальные скройте."
+  },
+  "popupReorderHint": {
+    "message": "Порядок вкладок можно изменить перетаскиванием на странице YouTube."
+  },
+  "popupMinVisibleWarning": {
+    "message": "Должна оставаться видимой хотя бы одна вкладка."
+  },
+  "popupTabRecommendations": {
+    "message": "Видео"
+  },
+  "popupTabComments": {
+    "message": "Комментарии"
+  },
+  "popupTabChapters": {
+    "message": "Главы"
+  },
+  "popupTabAsk": {
+    "message": "Спросить"
+  },
+  "popupTabScript": {
+    "message": "Расшифровка"
+  },
+  "popupSupportCoffee": {
+    "message": "Поддержать чашкой кофе"
+  }
+}

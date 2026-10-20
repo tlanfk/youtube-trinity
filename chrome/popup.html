@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Trinity</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="popup-header">
+      <div class="popup-title-row">
+        <h1 id="popup-title"></h1>
+        <button id="support-coffee-button" class="support-coffee-button" type="button">
+          <span id="support-coffee-tooltip" class="support-coffee-tooltip" role="tooltip"></span>
+          <img src="support-coffee.png" alt="">
+        </button>
+      </div>
+      <p id="popup-subtitle"></p>
+    </header>
+
+    <section id="tab-list" class="tab-list" aria-label="Visible tabs"></section>
+
+    <p id="popup-warning" class="popup-warning" hidden></p>
+    <p id="popup-hint" class="popup-hint"></p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

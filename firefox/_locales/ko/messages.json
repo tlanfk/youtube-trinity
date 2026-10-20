@@ -1,0 +1,41 @@
+{
+  "extName": {
+    "message": "YouTube Trinity"
+  },
+  "extDescription": {
+    "message": "유튜브 사이드바에서 댓글, 챕터, 스크립트를 한눈에 보고 탭 순서도 바꿔보세요."
+  },
+  "popupActionTitle": {
+    "message": "YouTube Trinity 설정"
+  },
+  "popupTitle": {
+    "message": "표시할 탭"
+  },
+  "popupSubtitle": {
+    "message": "보이고 싶은 항목만 남기고 나머지는 숨길 수 있습니다."
+  },
+  "popupReorderHint": {
+    "message": "탭 순서는 유튜브 화면에서 드래그로 바꿀 수 있습니다."
+  },
+  "popupMinVisibleWarning": {
+    "message": "최소 1개 탭은 표시되어야 합니다."
+  },
+  "popupTabRecommendations": {
+    "message": "추천 영상"
+  },
+  "popupTabComments": {
+    "message": "댓글"
+  },
+  "popupTabChapters": {
+    "message": "챕터"
+  },
+  "popupTabAsk": {
+    "message": "질문하기"
+  },
+  "popupTabScript": {
+    "message": "스크립트"
+  },
+  "popupSupportCoffee": {
+    "message": "커피 한잔으로 응원하기"
+  }
+}

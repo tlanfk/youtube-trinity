@@ -1,0 +1,41 @@
+{
+  "extName": {
+    "message": "YouTube Trinity"
+  },
+  "extDescription": {
+    "message": "在 YouTube 侧边栏中一目了然地查看评论、章节和文字稿。"
+  },
+  "popupActionTitle": {
+    "message": "YouTube Trinity 设置"
+  },
+  "popupTitle": {
+    "message": "显示的标签"
+  },
+  "popupSubtitle": {
+    "message": "只保留您想看到的项目，其余项目可以隐藏。"
+  },
+  "popupReorderHint": {
+    "message": "标签顺序可以在 YouTube 页面中通过拖拽调整。"
+  },
+  "popupMinVisibleWarning": {
+    "message": "至少要保留 1 个可见标签。"
+  },
+  "popupTabRecommendations": {
+    "message": "推荐视频"
+  },
+  "popupTabComments": {
+    "message": "评论"
+  },
+  "popupTabChapters": {
+    "message": "章节"
+  },
+  "popupTabAsk": {
+    "message": "提问"
+  },
+  "popupTabScript": {
+    "message": "文字稿"
+  },
+  "popupSupportCoffee": {
+    "message": "请我喝杯咖啡支持一下"
+  }
+}
