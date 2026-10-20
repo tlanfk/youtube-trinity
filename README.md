@@ -110,11 +110,9 @@ youtube-trinity/
 
 기능은 같아야 하므로 한쪽을 고치면 다른 쪽도 같이 고칩니다. 의도된 차이는 아래뿐입니다.
 
-| 파⁠일 | 차이 |
-|---|---|
-| `content.js`, `popup.js` | Firefox 판은 `browser`(없으면 `chrome`)를 쓰는 호환 레이어(`extensionApi`)와 Promise 형 `storage.get` 처리가 있고, DOM 삽입에 `innerHTML` 대신 DOM API를 씁니다. Chrome 판은 `chrome.*` 를 직접 씁니다. |
-| `manifest.json` | Firefox 판에만 `browser_specific_settings.gecko`(부가 기능 id, `data_collection_permissions: none`, `strict_min_version: 142.0`)가 있고 아이콘이 `icon-16/48/128` 로 나뉩니다. |
-| 나⁠머⁠지 | `styles.css`, `popup.css`, `popup.html`, `_locales/`, 이미지는 두 폴더가 동일합니다. |
+- `content.js`, `popup.js` — Firefox 판은 `browser`(없으면 `chrome`)를 쓰는 호환 레이어(`extensionApi`)와 Promise 형 `storage.get` 처리가 있고, DOM 삽입에 `innerHTML` 대신 DOM API를 씁니다. Chrome 판은 `chrome.*` 를 직접 씁니다.
+- `manifest.json` — Firefox 판에만 `browser_specific_settings.gecko`(부가 기능 id, `data_collection_permissions: none`, `strict_min_version: 142.0`)가 있고 아이콘이 `icon-16/48/128` 로 나뉩니다.
+- 나머지 — `styles.css`, `popup.css`, `popup.html`, `_locales/`, 이미지는 두 폴더가 동일합니다.
 
 > **내 Firefox 부가 기능으로 서명·배포하려면** `firefox/manifest.json` 의 `gecko.id` 를 본인 것으로 바꾸세요. 저장소의 값(`youtube-trinity@doolli.local`)은 이미 게시된 부가 기능의 식별자라 바꾸면 업데이트가 이어지지 않아 그대로 두었습니다.
 
