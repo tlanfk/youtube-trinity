@@ -21,13 +21,11 @@ YouTube Trinity는 이 정보들을 **오른쪽 사이드바의 탭**으로 모�
 
 ## 기능
 
-| 탭 | 하는 일 |
-|---|---|
-| 추천 영상 (Videos / Related) | 기존 추천 목록을 그대로 두고 독립된 스크롤로 탐색 |
-| 댓글 (Comments) | 영상을 보면서 댓글을 읽고 쓸 수 있음 |
-| 챕터 (Chapters) | 챕터 목록을 바로 보고 원하는 구간으로 이동 |
-| 질문하기 (Ask) | 유튜브가 제공하는 영상에서 "질문하기" 패널을 사이드바에서 사용 |
-| 스크립트 (Transcript) | 설명란을 뒤지지 않고 텍스트를 훑고, 줄을 누르면 그 시점으로 이동 |
+- **추천 영상 (Videos / Related)** — 기존 추천 목록을 그대로 두고 독립된 스크롤로 탐색
+- **댓글 (Comments)** — 영상을 보면서 댓글을 읽고 쓸 수 있음
+- **챕터 (Chapters)** — 챕터 목록을 바로 보고 원하는 구간으로 이동
+- **질문하기 (Ask)** — 유튜브가 제공하는 영상에서 "질문하기" 패널을 사이드바에서 사용
+- **스크립트 (Transcript)** — 설명란을 뒤지지 않고 텍스트를 훑고, 줄을 누르면 그 시점으로 이동
 
 - **탭 순서 바꾸기** — 탭을 드래그하면 다른 탭이 부드럽게 비켜 서고, 순서는 저장됩니다.
 - **보일 탭 고르기** — 확장 프로그램 아이콘을 누르면 나오는 설정에서 필요한 탭만 남기고 숨깁니다. (최소 1개는 남음)
@@ -35,9 +33,13 @@ YouTube Trinity는 이 정보들을 **오른쪽 사이드바의 탭**으로 모�
 
 ![사이드바](docs/screenshots/sidebar.png)
 
-| 설정 팝업 (Ask를 끈 모습, 오른쪽) | 사이드바 탭 줄 (위: 전체 / 아래: Ask 숨김) |
-|---|---|
-| ![팝업](docs/screenshots/popup.png) | ![탭 줄](docs/screenshots/tabs-before-after.png) |
+**설정 팝업** — 왼쪽: 전체 표시, 오른쪽: Ask를 끈 모습
+
+![팝업](docs/screenshots/popup.png)
+
+**사이드바 탭 줄** — 위: 전체 표시, 아래: Ask 숨김
+
+![탭 줄](docs/screenshots/tabs-before-after.png)
 
 ## 설치
 
@@ -106,11 +108,9 @@ youtube-trinity/
 
 기능은 같아야 하므로 한쪽을 고치면 다른 쪽도 같이 고칩니다. 의도된 차이는 아래뿐입니다.
 
-| 파일 | 차이 |
-|---|---|
-| `content.js`, `popup.js` | Firefox 판은 `browser`(없으면 `chrome`)를 쓰는 호환 레이어(`extensionApi`)와 Promise 형 `storage.get` 처리가 있고, DOM 삽입에 `innerHTML` 대신 DOM API를 씁니다. Chrome 판은 `chrome.*` 를 직접 씁니다. |
-| `manifest.json` | Firefox 판에만 `browser_specific_settings.gecko`(부가 기능 id, `data_collection_permissions: none`, `strict_min_version: 142.0`)가 있고 아이콘이 `icon-16/48/128` 로 나뉩니다. |
-| 나머지 | `styles.css`, `popup.css`, `popup.html`, `_locales/`, 이미지는 두 폴더가 동일합니다. |
+- `content.js`, `popup.js` — Firefox 판은 `browser`(없으면 `chrome`)를 쓰는 호환 레이어(`extensionApi`)와 Promise 형 `storage.get` 처리가 있고, DOM 삽입에 `innerHTML` 대신 DOM API를 씁니다. Chrome 판은 `chrome.*` 를 직접 씁니다.
+- `manifest.json` — Firefox 판에만 `browser_specific_settings.gecko`(부가 기능 id, `data_collection_permissions: none`, `strict_min_version: 142.0`)가 있고 아이콘이 `icon-16/48/128` 로 나뉩니다.
+- 나머지 — `styles.css`, `popup.css`, `popup.html`, `_locales/`, 이미지는 두 폴더가 동일합니다.
 
 > **내 Firefox 부가 기능으로 서명·배포하려면** `firefox/manifest.json` 의 `gecko.id` 를 본인 것으로 바꾸세요. 저장소의 값(`youtube-trinity@doolli.local`)은 이미 게시된 부가 기능의 식별자라 바꾸면 업데이트가 이어지지 않아 그대로 두었습니다.
 
